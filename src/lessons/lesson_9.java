@@ -26,6 +26,5 @@ public class lesson_9 {
         }
         System.out.println((char) ('i' - 1));
         System.out.println(" ");
-        System.out.println("Hi Gena");
     }
 }
