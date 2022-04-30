@@ -28,6 +28,7 @@ public class lesson_9 {
         System.out.println(" ");
 
         System.out.println("Hi");
+        System.out.println("Computer_2");
 
     }
 }
