@@ -26,7 +26,7 @@ public class HW10_Task_22 {
                 if(second.indexOf(subString) != - 1 && third.indexOf(subString) != -1){
                     result =  subString;
                 } else {
-                    j++;
+                    j++;//
                 }
 
             }

@@ -179,9 +179,9 @@ public class HW10 {
               if(second.indexOf(subString) != - 1 && third.indexOf(subString) != -1){
                   result =  subString;
               } else {
-                  j++;
+                  j++; //Uvelichm j esli sledushaya bookva ne ravna, substring udalit first latter (1 to 2(3,4,5)
               }
-
+                // inache j ostanetsya temje and  substring uje budet is 2 bookv ( j = 0 to 2(3,4,5))
            }
 
            return result;
