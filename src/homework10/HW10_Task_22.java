@@ -25,7 +25,8 @@ public class HW10_Task_22 {
             int j = 0;
             for(int i = 0; i < smallestString.length(); i++){
                 subString = smallestString.substring(j, i + 1);
-                if(second.indexOf(subString) != - 1 && third.indexOf(subString) != -1){
+                //if(second.indexOf(subString) != - 1 && third.indexOf(subString) != -1){
+                if(second.contains(subString) && third.contains(subString)){
                     result =  subString;
                 } else {
                     j++;//
