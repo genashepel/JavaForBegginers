@@ -3,8 +3,10 @@ package homework10;
 public class HW10_Task_22 {
 
     public static String longestCommonSubstring(String one, String second, String third ){
-        if((one != null && second != null && third != null)
-                || (one.length() > 0 && second.length() > 0 && third.length() > 0)){
+        if((one == null && second == null && third == null)
+                || (one.length() <= 0 || second.length() <= 0 || third.length() <= 0)) {
+            return "String is Empty or Null";
+        }
 
             one = one.toLowerCase();
             second = second.toLowerCase();
@@ -32,14 +34,13 @@ public class HW10_Task_22 {
             }
 
             return result;
-        }
 
-        return "String is Empty or Null";
     }
 
     public static void main(String[] args) {
         System.out.println(longestCommonSubstring("Smaze", "amazing", "amazon"));
         System.out.println(longestCommonSubstring("Smmazze", "mmazing", "ghMmammazon"));
         System.out.println(longestCommonSubstring("Smmaaaazze", "mmaaaazing", "ghMmammazaaaaon"));
+        System.out.println(longestCommonSubstring("aaaa", "aab", "ab"));
     }
 }
