@@ -42,5 +42,6 @@ public class HW10_Task_22 {
         System.out.println(longestCommonSubstring("Smmazze", "mmazing", "ghMmammazon"));
         System.out.println(longestCommonSubstring("Smmaaaazze", "mmaaaazing", "ghMmammazaaaaon"));
         System.out.println(longestCommonSubstring("aaaa", "aab", "ab"));
+        System.out.println(longestCommonSubstring("aaaa", "ab", "aba"));
     }
 }
