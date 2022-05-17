@@ -14,6 +14,7 @@ public class HW10_Task_22 {
 
             String smallestString = one;
             String result = "";
+            String tempResult = "";
 
             if(smallestString.length() > second.length()){
                 smallestString = second;
@@ -22,16 +23,19 @@ public class HW10_Task_22 {
                 smallestString = third;
             }
             String subString = "";
+
             int j = 0;
             for(int i = 0; i < smallestString.length(); i++){
                 subString = smallestString.substring(j, i + 1);
                 //if(second.indexOf(subString) != - 1 && third.indexOf(subString) != -1){
-                if(second.contains(subString) && third.contains(subString)){
+                if(one.contains(subString) && second.contains(subString) && third.contains(subString)){
                     result =  subString;
                 } else {
                     j++;//
+                    if(tempResult.length() > result.length()){//Dobavil etu proverku tak kak bez nee ne rabotaet
+                        result = tempResult;                   //v sluche "corapotr", "corbpotr", "corcpotr"
+                    }
                 }
-
             }
 
             return result;
@@ -43,6 +47,8 @@ public class HW10_Task_22 {
         System.out.println(longestCommonSubstring("Smmazze", "mmazing", "ghMmammazon"));
         System.out.println(longestCommonSubstring("Smmaaaazze", "mmaaaazing", "ghMmammazaaaaon"));
         System.out.println(longestCommonSubstring("aaaa", "aab", "ab"));
-        System.out.println(longestCommonSubstring("aaaa", "ab", "aba"));
+        System.out.println(longestCommonSubstring("abaaa", "ab", "aba"));
+        System.out.println(longestCommonSubstring("coracorp", "corbcorp", "corccorp"));
+        System.out.println(longestCommonSubstring("corapotr", "corbpotr", "corcpotr"));
     }
 }

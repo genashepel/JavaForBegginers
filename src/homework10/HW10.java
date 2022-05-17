@@ -154,6 +154,50 @@ public class HW10 {
         return new String[]{};
     }
 
+    //Task20
+    public static String removeDuplicates(String str){
+        if(str == null || str.length() <= 0){
+            return "Stroka Null or Empty";
+        }
+        str = str.toLowerCase();
+        String result = "";
+        for(int i = 0; i < str.length(); i++) {
+
+            if(!(result.contains(str.substring(i, i + 1)))){ //esli v stroke result net tekushey bukvi
+                                                                // --> zapisat v result etu bukvu
+                result = result + str.substring(i, i + 1);
+            }
+        }
+        return result;
+    }
+
+    //Task 21
+    public static String stringIntersection(String str1, String str2){
+        if(str1 == null || str2 == null || str1.length() <= 0 || str2.length() <= 0){
+            return "Stroka is Empty or Null";
+        }
+
+        String result = "";
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+
+        String smallestString = str1;
+        if(str1.length() > str2.length()){
+            smallestString = str2;
+        }
+        int j = 0;
+        String subString = "";
+        for (int i =0; i < smallestString.length(); i++){
+            subString = smallestString.substring(j, i + 1);
+            if(str2.contains(subString)){
+                result = subString;
+            }else {
+                j++;
+            }
+        }
+        return result;
+    }
+
     //Task 22
     public static String longestCommonSubstring(String one, String second, String third ){
        if((one != null && second != null && third != null)
@@ -291,8 +335,22 @@ public class HW10 {
         taskLine();
         taskLine();
         taskLine();
+
+
+        //Task20
         taskLine();
+
+        System.out.println(removeDuplicates("AABBCCaabbcc"));
+        System.out.println(removeDuplicates("AAhBBtCCa abbtchc n"));
+        System.out.println(removeDuplicates(""));
+
+        //Task 21
         taskLine();
+
+        System.out.println(stringIntersection("Carrot", "carwash"));
+        System.out.println(stringIntersection("Noob", "Schmooze"));
+        System.out.println(stringIntersection("a", null));
+        System.out.println(stringIntersection("a", ""));
 
         //Task 22
         taskLine();
