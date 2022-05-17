@@ -33,7 +33,8 @@ public class HW10_Task_22 {
                 } else {
                     j = i; //j++ was my misteyk
                     if(tempResult.length() < result.length()){//Dobavil etu proverku tak kak bez nee ne rabotaet
-                        tempResult = result;                   //v sluche "corapotr", "corbpotr", "corcpotr"
+                        tempResult = result;
+                        System.out.println(tempResult);//v sluche "corapotr", "corbpotr", "corcpotr"
                     }
                 }
             }
@@ -46,14 +47,15 @@ public class HW10_Task_22 {
     }
 
     public static void main(String[] args) {
-//        System.out.println(longestCommonSubstring("Smaze", "amazing", "amazon"));
-//        System.out.println(longestCommonSubstring("Smmazze", "mmazing", "ghMmammazon"));
-//        System.out.println(longestCommonSubstring("Smmaaaazze", "mmaaaazing", "ghMmammazaaaaon"));
-//        System.out.println(longestCommonSubstring("aaaa", "aab", "ab"));
-//        System.out.println(longestCommonSubstring("abaaa", "ab", "aba"));
-//        System.out.println(longestCommonSubstring("coracorp", "corbcorp", "corccorp"));
+        System.out.println(longestCommonSubstring("Smaze", "amazing", "amazon"));
+        System.out.println(longestCommonSubstring("Smmazze", "mmazing", "ghMmammazon"));
+        System.out.println(longestCommonSubstring("Smmaaaazze", "mmaaaazing", "ghMmammazaaaaon"));
+        System.out.println(longestCommonSubstring("aaaa", "aab", "ab"));
+        System.out.println(longestCommonSubstring("abaaa", "ab", "aba"));
+        System.out.println(longestCommonSubstring("coracorp", "corbcorp", "corccorp"));
         System.out.println(longestCommonSubstring("corapotr", "corbpotr", "corcpotr"));
-//        System.out.println(longestCommonSubstring("corporapotr", "corporbpotr", "corporcpotr"));
+        System.out.println(longestCommonSubstring("corporapotr", "corporbpotr", "corporcpotr"));
+        System.out.println(longestCommonSubstring("1122233334444", "11a222b3333c4444", "11d222e3333f4444"));
 
     }
 }
