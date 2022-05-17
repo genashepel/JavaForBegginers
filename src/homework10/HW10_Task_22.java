@@ -31,24 +31,29 @@ public class HW10_Task_22 {
                 if(one.contains(subString) && second.contains(subString) && third.contains(subString)){
                     result =  subString;
                 } else {
-                    j++;//
-                    if(tempResult.length() > result.length()){//Dobavil etu proverku tak kak bez nee ne rabotaet
-                        result = tempResult;                   //v sluche "corapotr", "corbpotr", "corcpotr"
+                    j = i; //j++ was my misteyk
+                    if(tempResult.length() < result.length()){//Dobavil etu proverku tak kak bez nee ne rabotaet
+                        tempResult = result;                   //v sluche "corapotr", "corbpotr", "corcpotr"
                     }
                 }
             }
 
-            return result;
-
+            if(tempResult.length() > result.length()){
+                return tempResult;
+            } else {
+                return result;
+            }
     }
 
     public static void main(String[] args) {
-        System.out.println(longestCommonSubstring("Smaze", "amazing", "amazon"));
-        System.out.println(longestCommonSubstring("Smmazze", "mmazing", "ghMmammazon"));
-        System.out.println(longestCommonSubstring("Smmaaaazze", "mmaaaazing", "ghMmammazaaaaon"));
-        System.out.println(longestCommonSubstring("aaaa", "aab", "ab"));
-        System.out.println(longestCommonSubstring("abaaa", "ab", "aba"));
-        System.out.println(longestCommonSubstring("coracorp", "corbcorp", "corccorp"));
+//        System.out.println(longestCommonSubstring("Smaze", "amazing", "amazon"));
+//        System.out.println(longestCommonSubstring("Smmazze", "mmazing", "ghMmammazon"));
+//        System.out.println(longestCommonSubstring("Smmaaaazze", "mmaaaazing", "ghMmammazaaaaon"));
+//        System.out.println(longestCommonSubstring("aaaa", "aab", "ab"));
+//        System.out.println(longestCommonSubstring("abaaa", "ab", "aba"));
+//        System.out.println(longestCommonSubstring("coracorp", "corbcorp", "corccorp"));
         System.out.println(longestCommonSubstring("corapotr", "corbpotr", "corcpotr"));
+//        System.out.println(longestCommonSubstring("corporapotr", "corporbpotr", "corporcpotr"));
+
     }
 }
