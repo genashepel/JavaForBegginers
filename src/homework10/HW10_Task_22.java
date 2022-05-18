@@ -34,11 +34,15 @@ public class HW10_Task_22 {
                     j = i; //j++ was my misteyk
                     if(tempResult.length() < result.length()){//Dobavil etu proverku tak kak bez nee ne rabotaet
                         tempResult = result;
-                        System.out.println(tempResult);//v sluche "corapotr", "corbpotr", "corcpotr"
+                        j--; //eta stroca nujna dlya "Smmaaaazze", "mmaaaazing", "ghMmammazaaaaon"
+                        //System.out.println(tempResult);//v sluche "corapotr", "corbpotr", "corcpotr"
                     }
                 }
             }
 
+            if((tempResult.length() == result.length()) && !(tempResult.equals(result))){
+                return "We found two strings whis same langht  -->" + tempResult + " and " + result;
+            }
             if(tempResult.length() > result.length()){
                 return tempResult;
             } else {
@@ -55,7 +59,8 @@ public class HW10_Task_22 {
         System.out.println(longestCommonSubstring("coracorp", "corbcorp", "corccorp"));
         System.out.println(longestCommonSubstring("corapotr", "corbpotr", "corcpotr"));
         System.out.println(longestCommonSubstring("corporapotr", "corporbpotr", "corporcpotr"));
-        System.out.println(longestCommonSubstring("1122233334444", "11a222b3333c4444", "11d222e3333f4444"));
+        System.out.println(longestCommonSubstring("corpoapotrc", "corporbpotrc", "corporcpotrc"));
+        System.out.println(longestCommonSubstring("11222333334444", "11a222b3333c4444", "11d222e3333f4444"));
 
     }
 }
