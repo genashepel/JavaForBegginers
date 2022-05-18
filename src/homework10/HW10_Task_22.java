@@ -41,7 +41,7 @@ public class HW10_Task_22 {
             }
 
             if((tempResult.length() == result.length()) && !(tempResult.equals(result))){
-                return "We found two strings whis same langht  -->" + tempResult + " and " + result;
+                return "We found two strings with same langht  -->" + tempResult + " and " + result;
             }
             if(tempResult.length() > result.length()){
                 return tempResult;
@@ -61,6 +61,7 @@ public class HW10_Task_22 {
         System.out.println(longestCommonSubstring("corporapotr", "corporbpotr", "corporcpotr"));
         System.out.println(longestCommonSubstring("corpoapotrc", "corporbpotrc", "corporcpotrc"));
         System.out.println(longestCommonSubstring("11222333334444", "11a222b3333c4444", "11d222e3333f4444"));
+        System.out.println(longestCommonSubstring("Nosoob", "Schmooze", "Schmooze"));
 
     }
 }
